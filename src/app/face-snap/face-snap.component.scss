@@ -1,6 +1,74 @@
 .face-snap-card {
-    width: 35%;
-    img {
-        width: 100%;
+  box-sizing: border-box;
+  width: 50%;
+  margin: 30px auto;
+  padding: 20px 30px;
+  border-radius: 16px;
+
+  background: linear-gradient(180deg, #fdf9ff, #f3e9ff);
+  border: 1px solid #e6d8ff;
+
+  box-shadow: 0 10px 25px rgba(120, 80, 160, 0.15);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(120, 80, 160, 0.25);
+  }
+
+  img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+    color: #6a4c93;
+    font-family: 'Georgia', serif;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    color: #5f5f5f;
+    line-height: 1.5;
+  }
+
+  button {
+    background-color: #b497e7;
+    color: white;
+
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #9a7bd6;
     }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+.snapped {
+  background-color: rgba(lightgreen, 0.4);
+  color: darkgreen;
+  button {
+    box-shadow: lightgreen 3px 3px 7px;
+    color: darkgreen;
+    &:active {
+      box-shadow: lightgreen 0 0 5px;
+    }
+  }
 }
